@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple and responsive article listing page">
 
     <link
       rel="icon"
@@ -13,9 +14,11 @@
 
     <title>Simple Article Listing | devChallenges.io</title>
 
-    <!--Styles, google fonts and images are fetched inside script tag -->    
+    <!--Images are fetched inside script tag -->   
+    <link rel="stylesheet" href="./styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
   </head>
   <body>
     <!-- 
@@ -47,12 +50,12 @@
 
     <div class="container">
       <h2 class="heading">We release interesting articles about technology</h2>
-      <img class="seperator" src="./resources/Seperator.svg" alt="seperator..">
+      <img class="seperator" height="1rem" width="100%" src="./resources/Seperator.svg" alt="seperator..">
       <article>
         <picture>
           <source media="(min-width: 650px)" srcset="./resources/photo_1@2x.png">
           <source media="(min-width: 400px)" srcset="./resources/photo_1.png">
-          <img class="article-image" src="./resources/photo_1.png" alt="Cloud Computing"/>
+          <img class="article-image" height="10rem" width="fit-content" src="./resources/photo_1.png" alt="Cloud Computing"/>
         </picture>
 
         <section>
@@ -65,7 +68,7 @@
         <picture>
           <source media="(min-width: 650px)" srcset="./resources/photo_3@2x.png">
           <source media="(min-width: 400px)" srcset="./resources/photo_3.png">
-          <img class="article-image" src="./resources/photo_3.png" alt="Cloud Computing"/>
+          <img class="article-image" height="10rem" width="fit-content" src="./resources/photo_3.png" alt="Cloud Computing"/>
         </picture>
 
         <section>
@@ -78,7 +81,7 @@
         <picture>
           <source media="(min-width: 650px)" srcset="./resources/photo_2@2x.png">
           <source media="(min-width: 400px)" srcset="./resources/photo_2.png">
-          <img class="article-image" src="./resources/photo_2.png" alt="Cloud Computing"/>
+          <img class="article-image" height="10rem" width="fit-content" src="./resources/photo_2.png" alt="Cloud Computing"/>
         </picture>
 
         <section>
@@ -102,16 +105,6 @@
       link.href = url;
       document.head.appendChild(link);
     }
-
-    const link = document.createElement('link');
-    link.href = "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-
-    const stylelink = document.createElement('link');
-    stylelink.href = "styles.css";
-    stylelink.rel = "stylesheet";
-    document.head.appendChild(stylelink)
 
     if(window.innerWidth >= 650) {
       addImage("resources/photo_1@2x.png");
